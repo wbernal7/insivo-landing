@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insivo - Sistema de Recomendación Automatizado para Clínicas de Estética</title>
+    <title>Insivo - Sistema de Recomendación Automatizado para Clínicas de Estética y Bienestar</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Raleway & Nanum Myeongjo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Raleway:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Raleway:ital,wght=0,100;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -43,7 +43,6 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: .5; transform: scale(1.05); }
         }
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -60,24 +59,19 @@
 
     <!-- TOP BAR -->
     <div class="bg-insivoSecondary border-b border-insivoGold/20 py-2.5 px-4 text-center text-xs md:text-sm tracking-widest text-insivoCream">
-        <i class="fa-solid fa-circle-check text-insivoGold mr-2"></i>TECNOLOGÍA EXCLUSIVA PARA CIRUJANOS PLÁSTICOS Y MÉDICOS ESTÉTICOS EN COSTA RICA
+        <i class="fa-solid fa-circle-check text-insivoGold mr-2"></i>TECNOLOGÍA EXCLUSIVA PARA ESPECIALISTAS EN BIENESTAR Y ESTÉTICA en Costa Rica
     </div>
 
     <!-- HEADER -->
     <header class="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center gap-2">
-            <!-- Insivo Logo & Isotipo Recreated in SVG -->
             <div class="flex items-center tracking-[0.25em] text-2xl font-light text-white">
                 INSIV
                 <div class="relative w-8 h-8 ml-1 flex items-center justify-center">
-                    <!-- Isotipo original: Círculo con pulso y punto -->
                     <svg viewBox="0 0 100 100" class="w-full h-full text-insivoGold">
                         <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="8" stroke-dasharray="210 100" class="transform -rotate-90 origin-center" />
-                        <!-- Pulso cardiaco -->
                         <path d="M 20 50 L 40 50 L 48 25 L 56 75 L 64 45 L 70 55 L 80 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                        <!-- Punto del isotipo -->
-                        <circle cx="50" cy="18" r="7" fill="#white" class="fill-white"/>
-                        <!-- Arco dorado inferior -->
+                        <circle cx="50" cy="18" r="7" fill="white" class="fill-white"/>
                         <path d="M 25 80 A 42 42 0 0 0 75 80" fill="none" stroke="#E2BE9A" stroke-width="8" stroke-linecap="round"/>
                     </svg>
                 </div>
@@ -86,14 +80,14 @@
         <div class="flex items-center gap-3">
             <span class="text-xs md:text-sm text-gray-400 hidden md:inline">¿Listo para escalar sus consultas?</span>
             <a href="#booking-section" class="border border-insivoGold text-insivoGold hover:bg-insivoGold hover:text-insivoDark transition-all duration-300 text-xs md:text-sm font-bold tracking-wider py-2 px-5 rounded-full">
-                RESERVAR SESIÓN <i class="fa-solid fa-calendar-days ml-2"></i>
+                AGENDA TU CONSULTORÍA <i class="fa-solid fa-calendar-days ml-2"></i>
             </a>
         </div>
     </header>
 
     <!-- HERO SECTION / VSL -->
     <section class="max-w-6xl mx-auto px-6 pt-8 pb-16 md:py-20 text-center">
-        <span class="text-insivoGold text-xs md:text-sm tracking-[0.3em] font-semibold uppercase block mb-4">La evolución del "boca en boca" tradicional</span>
+        <span class="text-insivoGold text-xs md:text-sm tracking-[0.3em] font-semibold uppercase block mb-4">Sistematiza tu canal más rentable y aprende a escalarlo</span>
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight max-w-4xl mx-auto leading-tight mb-6">
             Deje de basar el crecimiento de su clínica únicamente en <span class="text-insivoGold font-serif-brand italic">anuncios pagados</span>
         </h1>
@@ -103,27 +97,19 @@
 
         <!-- INTERACTIVE VSL SIMULATOR -->
         <div class="max-w-4xl mx-auto bg-insivoSecondary rounded-2xl border border-insivoGold/20 overflow-hidden shadow-2xl shadow-black/50 mb-12 relative">
-            <!-- Simulated Video Player Area -->
             <div id="vsl-player" class="relative aspect-video w-full bg-black/90 flex flex-col justify-between p-6 md:p-10 select-none">
-                <!-- Watermark Logo -->
                 <div class="absolute top-4 right-6 opacity-30 text-xs tracking-widest text-white flex items-center gap-1">
                     INSIVO <span class="text-[8px] border border-white/50 px-1 py-0.5 rounded">VSL</span>
                 </div>
 
-                <!-- Slide Content Container (Changes dynamically) -->
                 <div class="flex-grow flex flex-col justify-center items-center text-center px-4 max-w-2xl mx-auto">
-                    <!-- Title/Step indicator -->
                     <span id="vsl-tag" class="text-xs uppercase tracking-widest text-insivoGold bg-insivoGold/10 px-3 py-1 rounded-full mb-6 border border-insivoGold/20">PASO 1: EL DOLOR</span>
-                    
-                    <!-- Dynamic Slide Text -->
                     <p id="vsl-text" class="text-lg md:text-2xl font-light leading-relaxed text-insivoCream font-serif-brand min-h-[140px] flex items-center justify-center">
-                        "En el sector de la cirugía plástica, basar el crecimiento únicamente en pauta digital satura a su equipo con personas que solo cotizan precios..."
+                        "En el sector de la salud estética, basar el crecimiento únicamente en pauta digital satura a su equipo con personas que solo cotizan precios..."
                     </p>
                 </div>
 
-                <!-- Audio Waveform Simulation / Control Area -->
                 <div class="w-full flex flex-col gap-4">
-                    <!-- Waveform effect (Active when playing) -->
                     <div class="flex justify-center items-end gap-1 h-8 opacity-60">
                         <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-2"></span>
                         <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-5"></span>
@@ -135,12 +121,10 @@
                         <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-3"></span>
                     </div>
 
-                    <!-- Progress Bar -->
                     <div class="relative w-full h-1.5 bg-white/10 rounded-full cursor-pointer" id="progress-container">
                         <div id="vsl-progress" class="absolute top-0 left-0 h-full bg-insivoGold rounded-full transition-all duration-300" style="width: 15%;"></div>
                     </div>
 
-                    <!-- Audio Controls & Steps -->
                     <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
                         <div class="flex items-center gap-4">
                             <button id="vsl-prev-btn" onclick="prevSlide()" class="hover:text-white transition-colors p-1"><i class="fa-solid fa-backward-step text-lg"></i></button>
@@ -157,7 +141,7 @@
                 </div>
             </div>
 
-            <!-- VSL Text transcript toggle for quick scanners -->
+            <!-- VSL Text transcript -->
             <div class="bg-insivoDark/80 p-6 border-t border-insivoGold/20 text-left">
                 <div class="flex items-center justify-between cursor-pointer" onclick="toggleTranscript()">
                     <span class="text-xs font-semibold tracking-wider text-insivoCream uppercase flex items-center gap-2">
@@ -166,15 +150,15 @@
                     <span id="transcript-arrow" class="text-xs text-insivoGold transition-transform duration-300 transform"><i class="fa-solid fa-chevron-down"></i></span>
                 </div>
                 <div id="transcript-content" class="hidden mt-4 text-sm text-gray-400 leading-relaxed space-y-3">
-                    <p><strong class="text-white">[EL DOLOR]:</strong> En el sector de la cirugía plástica y la medicina estética en Costa Rica, la pauta digital suele ser la herramienta principal para atraer pacientes. Sin embargo, basar el crecimiento de una clínica únicamente en anuncios pagados genera un problema: se invierten recursos constantes en captar usuarios que muchas veces solo cotizan precios, sobrecargando al equipo de atención con consultas que no se concretan. El verdadero potencial de crecimiento no está en aumentar el presupuesto de esos anuncios, sino en el activo que la clínica ya construyó: los pacientes que ya pasaron por el consultorio, quedaron conformes con sus resultados y están dispuestos a recomendar el servicio. El error actual del mercado es dejar este canal de referidos al azar.</p>
-                    <p><strong class="text-white">[LA PROPUESTA]:</strong> Insivo es la tecnología desarrollada para resolver esta falta de optimización. Es una plataforma diseñada específicamente para especialistas en estética y cirugía que permite automatizar, estructurar y medir el canal de recomendaciones de la clínica. El sistema se integra con la base de datos existente para identificar los momentos clave tras un procedimiento y activar invitaciones digitales para que los pacientes actuales refieran a sus conocidos. Insivo convierte el proceso informal del "boca en boca" en un sistema comercial medible y bajo el control de la clínica.</p>
-                    <p><strong class="text-white">[EL BENEFICIO]:</strong> Al implementar Insivo, la clínica logra rentabilizar y escalar su propia base de datos, incrementando el volumen de procedimientos estéticos y quirúrgicos mediante pacientes que ya llegan con un alto nivel de confianza. Esto permite optimizar la inversión en pauta digital, reduce el costo de adquisición de nuevos usuarios y protege el posicionamiento de la marca médica. Mientras usted y su equipo se enfocan en los resultados clínicos, la plataforma convierte su historial de pacientes satisfechos en un canal constante de consultas.</p>
+                    <p><strong class="text-white">[EL DOLOR]:</strong> En el sector de la medicina estética, cirugía y bienestar en Costa Rica, la pauta digital suele ser la herramienta principal para atraer pacientes. Sin embargo, basar el crecimiento de una clínica únicamente en anuncios pagados genera un problema: se invierten recursos constantes en captar usuarios que muchas veces solo cotizan precios, sobrecargando al equipo con consultas frías. El verdadero potencial está en el activo que la clínica ya construyó: los pacientes que ya pasaron por el consultorio, quedaron conformes y están dispuestos a recomendar el servicio de forma estructurada.</p>
+                    <p><strong class="text-white">[LA PROPUESTA]:</strong> Insivo es la tecnología desarrollada para resolver esta falta de optimización. Es una plataforma diseñada específicamente para especialistas en estética y bienestar que permite automatizar, estructurar y medir el canal de recomendaciones de la clínica. El sistema se integra con la base de datos existente para identificar los momentos clave tras un procedimiento y activar invitaciones digitales fluidas. Insivo convierte el proceso informal de referidos en un sistema comercial bajo su control.</p>
+                    <p><strong class="text-white">[EL BENEFICIO]:</strong> Al implementar Insivo, la clínica logra rentabilizar y escalar su propia base de datos, incrementando el volumen de procedimientos médicos y estéticos mediante pacientes calificados que ya llegan con un alto nivel de confianza inicial debido a la validación de un tercero. Esto optimiza el flujo interno de atención, reduce la dependencia exclusiva de plataformas de anuncios y protege el posicionamiento de la marca médica.</p>
                 </div>
             </div>
         </div>
 
         <a href="#booking-section" class="inline-block bg-insivoGold hover:bg-insivoCream text-insivoDark text-sm md:text-base font-bold uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-insivoGold/10 pulse-soft">
-            Agendar Sesión Técnica de 10 Minutos <i class="fa-solid fa-arrow-right ml-2"></i>
+            AGENDA TU CONSULTORÍA <i class="fa-solid fa-arrow-right ml-2"></i>
         </a>
     </section>
 
@@ -183,7 +167,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-insivoGold text-xs tracking-[0.25em] font-semibold uppercase block mb-3">La diferencia fundamental</span>
-                <h2 class="text-2xl md:text-4xl font-light leading-tight">La diferencia entre dejar las recomendaciones al azar y tomar el control tecnológico</h2>
+                <h2 class="text-2xl md:text-4xl font-light leading-tight">La diferencia entre dejar las recomendaciones al azar y tomar el control con un sistema comprobado</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -219,7 +203,7 @@
                     <div class="w-12 h-12 rounded-full bg-insivoGold/10 flex items-center justify-center text-insivoGold mb-6">
                         <i class="fa-solid fa-square-poll-vertical text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-insivoGold">Con la Tecnología Insivo</h3>
+                    <h3 class="text-xl font-bold mb-4 text-insivoGold">Con tecnología Insivo</h3>
                     <ul class="space-y-4 text-gray-300 text-sm">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-insivoGold mt-1"></i>
@@ -227,18 +211,20 @@
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-insivoGold mt-1"></i>
-                            <span>Pacientes referidos con altos niveles de confianza inicial, acelerando la decisión de cirugía.</span>
+                            <span>Pacientes referidos con altos niveles de confianza inicial, acelerando la decisión del procedimiento.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-insivoGold mt-1"></i>
-                            <span>Estadísticas en tiempo real de qué pacientes son sus mejores embajadores de marca médica.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-insivoGold mt-1"></i>
-                            <span>Optimización y descompresión del presupuesto de pauta de adquisición fría.</span>
+                            <span>Procesos de recomendación que garantizan la llegada de prospectos mucho más filtrados gracias a la validación e introducción directa de un tercero.</span>
                         </li>
                     </ul>
                 </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#booking-section" class="inline-block bg-transparent border border-insivoGold text-insivoGold hover:bg-insivoGold hover:text-insivoDark text-sm font-bold uppercase tracking-wider px-8 py-3 rounded-full transition-all duration-300">
+                    SISTEMATIZAR MI CLÍNICA AHORA <i class="fa-solid fa-chevron-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -252,7 +238,6 @@
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8 items-center bg-insivoSecondary p-6 md:p-10 rounded-3xl border border-insivoGold/10">
-            <!-- Sliders -->
             <div class="lg:col-span-7 space-y-6">
                 <!-- Pacientes atendidos -->
                 <div>
@@ -300,16 +285,12 @@
                 <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">Ingreso adicional estimado al mes</span>
                 <span class="text-3xl md:text-5xl font-light text-insivoGold font-serif-brand block mb-4" id="result-revenue">$18,000</span>
                 <p class="text-xs text-gray-400 leading-relaxed mb-6">
-                    Esta cifra representa la captación latente de nuevos pacientes calificados de alto valor dentro de su base instalada actual sin requerir presupuesto de anuncios fríos.
+                    Esta cifra representa la captación latente de nuevos pacientes calificados de alto valor dentro de su base instalada actual sin requerir presupuestos adicionales en anuncios de adquisición fría.
                 </p>
                 <div class="border-t border-insivoGold/20 pt-4 text-left space-y-2">
                     <div class="flex justify-between text-xs text-gray-400">
                         <span>Nuevos pacientes mensuales:</span>
                         <span class="text-white font-bold" id="result-pacientes">6 pacientes</span>
-                    </div>
-                    <div class="flex justify-between text-xs text-gray-400">
-                        <span>Ahorro estimado en pauta:</span>
-                        <span class="text-white font-bold" id="result-ahorro">$1,200 USD</span>
                     </div>
                 </div>
             </div>
@@ -321,9 +302,9 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
                 <span class="text-insivoGold text-xs tracking-[0.25em] font-semibold uppercase block mb-3">ACCESO DIRECTO</span>
-                <h2 class="text-3xl md:text-4xl font-light">Agende su Sesión Técnica de 10 minutos</h2>
+                <h2 class="text-3xl md:text-4xl font-light">Agende su Sesión de Consultoría</h2>
                 <p class="text-gray-400 text-sm mt-3 max-w-lg mx-auto">
-                    Evaluemos la infraestructura actual de su base de datos para ver si califica para la integración directa de Insivo.
+                    Obtenga información estratégica sobre cómo nuestra herramienta tecnológica le permitirá escalar, optimizar y sistemetizar su canal comercial más fuerte.
                 </p>
             </div>
 
@@ -338,12 +319,9 @@
                             <span class="w-1.5 h-1.5 rounded-full bg-insivoGold"></span>
                             <span class="text-[10px] text-gray-400">DEMO</span>
                         </div>
-                        <h3 class="text-xl font-light font-serif-brand text-insivoCream mb-2">Sesión de Factibilidad Técnica</h3>
-                        <p class="text-xs text-gray-400 flex items-center gap-2 mb-4">
-                            <i class="fa-regular fa-clock text-insivoGold"></i> 10 Minutos de duración
-                        </p>
+                        <h3 class="text-xl font-light font-serif-brand text-insivoCream mb-2">Sesión de Crecimiento y Escalabilidad</h3>
                         <p class="text-xs text-gray-300 leading-relaxed mb-6">
-                            Analizaremos su CRM actual, volumen de pacientes e identificaremos la tasa de conversión promedio que puede esperar con nuestro piloto automatizado.
+                            Evaluaremos su ecosistema actual de base de datos, volumen de atención diaria y proyecciones de conversión directa utilizando tecnología de automatización estructurada.
                         </p>
                     </div>
 
@@ -354,13 +332,13 @@
                         </div>
                         <div class="flex items-center gap-3 text-xs text-gray-400">
                             <i class="fa-solid fa-user-doctor text-insivoGold"></i>
-                            <span>Exclusivo para médicos registrados</span>
+                            <span>Exclusivo para centros médicos y especialistas</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Calendar/Form Column -->
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between" id="calendar-flow-container">
+                <!-- Calendar/Form Column (Highlighted UI) -->
+                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between bg-insivoSecondary/80 border-2 border-insivoGold/30 shadow-inner rounded-r-none md:rounded-r-3xl shadow-black/40" id="calendar-flow-container">
                     <!-- Step 1: Select Day and Time -->
                     <div id="booking-step-1" class="space-y-6">
                         <div class="flex items-center justify-between">
@@ -370,18 +348,18 @@
                         
                         <!-- Mini Calendar Selector -->
                         <div class="grid grid-cols-4 gap-2" id="date-picker">
-                            <!-- JS will inject days dynamically starting from tomorrow -->
+                            <!-- JS dynamically injects days starting from tomorrow -->
                         </div>
 
                         <div>
                             <h4 class="text-xs font-semibold uppercase text-insivoGold tracking-wider mb-3">Horas disponibles</h4>
                             <div class="grid grid-cols-3 gap-2" id="time-picker">
-                                <button onclick="selectTime('08:30 AM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoSecondary hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">08:30 AM</button>
-                                <button onclick="selectTime('11:00 AM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoSecondary hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">11:00 AM</button>
-                                <button onclick="selectTime('02:15 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoSecondary hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">02:15 PM</button>
-                                <button onclick="selectTime('04:30 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoSecondary hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">04:30 PM</button>
-                                <button onclick="selectTime('05:00 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoSecondary hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">05:00 PM</button>
-                                <button onclick="selectTime('06:15 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoSecondary hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">06:15 PM</button>
+                                <button onclick="selectTime('08:30 AM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">08:30 AM</button>
+                                <button onclick="selectTime('11:00 AM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">11:00 AM</button>
+                                <button onclick="selectTime('02:15 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">02:15 PM</button>
+                                <button onclick="selectTime('04:30 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">04:30 PM</button>
+                                <button onclick="selectTime('05:00 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">05:00 PM</button>
+                                <button onclick="selectTime('06:15 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">06:15 PM</button>
                             </div>
                         </div>
 
@@ -400,338 +378,240 @@
                             <span class="text-xs text-gray-400 font-mono">Paso 2 de 2</span>
                         </div>
 
-                        <div class="bg-insivoSecondary/60 p-3 rounded-lg border border-insivoGold/10 text-xs">
+                        <div class="bg-insivoDark p-3 rounded-lg border border-insivoGold/10 text-xs">
                             <span class="text-gray-400 block">Horario seleccionado:</span>
-                            <span class="text-white font-bold" id="selected-summary">Miércoles, 17 de Junio - 02:15 PM</span>
+                            <span class="text-white font-bold" id="selected-summary">Seleccione una opción</span>
                         </div>
 
                         <form id="appointment-form" onsubmit="submitBooking(event)" class="space-y-3">
                             <div>
                                 <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Nombre Completo del Especialista</label>
-                                <input type="text" required id="form-name" placeholder="Dr. Daniel Solano" class="w-full bg-insivoSecondary border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
+                                <input type="text" required id="form-name" placeholder="Dr. Daniel Solano" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
                             </div>
                             <div class="grid grid-cols-2 gap-3">
                                 <div>
                                     <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Especialidad</label>
-                                    <select id="form-specialty" class="w-full bg-insivoSecondary border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
+                                    <select id="form-specialty" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
                                         <option>Cirugía Plástica</option>
                                         <option>Medicina Estética</option>
-                                        <option>Dermatología</option>
+                                        <option>Trasplante Capilar</option>
+                                        <option>Células Madre</option>
                                         <option>Odontología Estética</option>
-                                        <option>Otra Especialidad</option>
+                                        <option>Bienestar / Otra</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Nombre de la Clínica</label>
-                                    <input type="text" required id="form-clinic" placeholder="Aesthetic Clinic CR" class="w-full bg-insivoSecondary border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
+                                    <input type="text" required id="form-clinic" placeholder="Aesthetic Clinic" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Correo Electrónico de Consultorio</label>
-                                <input type="email" required id="form-email" placeholder="contacto@clinica.com" class="w-full bg-insivoSecondary border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
+                                <input type="email" required id="form-email" placeholder="contacto@clinica.com" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
                             </div>
-                            <div>
-                                <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">WhatsApp / Teléfono Móvil</label>
-                                <input type="tel" required id="form-phone" placeholder="+506 8888 8888" class="w-full bg-insivoSecondary border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
+                            <div class="pt-2">
+                                <button type="submit" class="w-full bg-insivoGold hover:bg-insivoCream text-insivoDark py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300">
+                                    PROGRAMAR CONSULTORÍA <i class="fa-solid fa-check ml-1"></i>
+                                </button>
                             </div>
-
-                            <button type="submit" class="w-full bg-insivoGold hover:bg-insivoCream text-insivoDark py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 mt-2">
-                                Agendar y Generar Link de Reunión <i class="fa-solid fa-check ml-1"></i>
-                            </button>
                         </form>
                     </div>
 
-                    <!-- Step 3: Booking Success -->
-                    <div id="booking-step-success" class="space-y-6 text-center py-8 hidden">
-                        <div class="w-16 h-16 rounded-full bg-green-500/10 text-green-400 flex items-center justify-center mx-auto border border-green-500/20">
-                            <i class="fa-solid fa-circle-check text-3xl"></i>
+                    <!-- Step 3: Success State -->
+                    <div id="booking-success" class="hidden text-center py-12 space-y-4">
+                        <div class="w-16 h-16 bg-insivoGold/20 text-insivoGold rounded-full flex items-center justify-center text-2xl mx-auto pulse-soft">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <div class="space-y-2">
-                            <h4 class="text-xl font-light font-serif-brand text-insivoCream">¡Sesión Agendada con Éxito!</h4>
-                            <p class="text-xs text-gray-400 max-w-sm mx-auto">
-                                Dr(a). <span id="success-doctor" class="font-bold text-white"></span>, la reunión de evaluación técnica de su clínica <span id="success-clinic" class="font-bold text-white"></span> ha sido confirmada.
-                            </p>
-                        </div>
-
-                        <!-- Meet Link simulated container -->
-                        <div class="bg-insivoSecondary p-4 rounded-xl border border-insivoGold/20 text-left space-y-3">
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-gray-400">Detalles de la sesión:</span>
-                                <span class="text-insivoGold font-mono" id="success-time-summary">Miércoles 17 de Jun, 02:15 PM</span>
-                            </div>
-                            <div class="border-t border-insivoGold/10 pt-3 flex flex-col sm:flex-row gap-2 justify-between items-center">
-                                <span class="text-[11px] text-gray-400"><i class="fa-solid fa-video text-insivoGold mr-1.5"></i> Google Meet Room ID: <span class="font-mono text-white">meet.google.com/ins-demo-room</span></span>
-                                <button onclick="copyToClipboard('meet.google.com/ins-demo-room')" class="text-xs text-insivoGold hover:underline flex items-center gap-1">
-                                    <i class="fa-regular fa-copy"></i> Copiar link
-                                </button>
-                            </div>
-                        </div>
-
-                        <p class="text-[11px] text-gray-500">Hemos enviado las credenciales y el recordatorio a su correo electrónico.</p>
+                        <h4 class="text-xl font-light font-serif-brand text-insivoCream">¡Consultoría Reservada!</h4>
+                        <p class="text-xs text-gray-400 max-w-sm mx-auto leading-relaxed">
+                            Los accesos directos y detalles de la llamada de Google Meet han sido enviados a su casilla de correo electrónico. Nos vemos pronto.
+                        </p>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
-        <div class="text-center mb-12">
-            <span class="text-insivoGold text-xs tracking-[0.25em] font-semibold uppercase block mb-3">RESOLVIENDO DUDAS</span>
-            <h2 class="text-3xl font-light">Preguntas Frecuentes</h2>
+    <!-- SECCIÓN DE TESTIMONIOS (REEMPLAZA FAQS) -->
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 border-t border-insivoGold/15">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-insivoGold text-xs tracking-[0.25em] font-semibold uppercase block mb-3">Casos de Éxito</span>
+            <h2 class="text-2xl md:text-4xl font-light">Especialistas que ya controlan su crecimiento</h2>
+            <p class="text-gray-400 text-sm md:text-base mt-3">Descubra los testimonios y opiniones reales sobre la efectividad de nuestra propuesta.</p>
         </div>
 
-        <div class="space-y-4">
-            <!-- FAQ 1 -->
-            <div class="bg-insivoSecondary/30 border border-insivoGold/15 rounded-xl p-6">
-                <h3 class="text-base font-bold text-insivoCream mb-2">¿Cómo se integra Insivo con mi clínica si ya tenemos nuestro propio CRM?</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Nuestra plataforma está diseñada específicamente para ser flexible. Poseemos un motor de sincronización que se puede conectar mediante APIs web directas o mediante cargas estructuradas periódicas de forma encriptada, protegiendo totalmente los datos privados de su clínica y pacientes.
-                </p>
-            </div>
-            <!-- FAQ 2 -->
-            <div class="bg-insivoSecondary/30 border border-insivoGold/15 rounded-xl p-6">
-                <h3 class="text-base font-bold text-insivoCream mb-2">¿Esto cumple con regulaciones de privacidad de datos médicos?</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Absolutamente. Insivo procesa únicamente datos para incentivar la recomendación externa que el paciente autoriza voluntariamente. No almacenamos, compartimos, ni procesamos historias clínicas, diagnósticos o registros de salud privados del paciente.
-                </p>
-            </div>
-            <!-- FAQ 3 -->
-            <div class="bg-insivoSecondary/30 border border-insivoGold/15 rounded-xl p-6">
-                <h3 class="text-base font-bold text-insivoCream mb-2">¿Qué pasa si mi clínica es pequeña y tengo pocos pacientes mensuales?</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Incluso para especialistas con menor flujo de volumen quirúrgico, cada paciente satisfecho tiene un valor de red increíble. Insivo le ayuda a exprimir al máximo ese valor sin que tenga que recordar proponerlo manualmente en su consulta.
-                </p>
-            </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Testimonio 1 -->
+            <a href="https://drive.google.com/file/d/1uPy2gdpLpdPh-DOT5dKFpDeOOqB-5zr/view?usp=drivesdk" target="_blank" class="bg-insivoSecondary p-6 rounded-2xl border border-insivoGold/10 hover:border-insivoGold/40 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="flex text-insivoGold gap-1 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                        "La tecnología nos permitió estructurar un canal que antes dábamos por sentado. Los referidos llegan con una disposición de compra altísima."
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-insivoGold/10 text-xs text-insivoGold group-hover:underline">
+                    <span>Ver Video Testimonio</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </a>
+
+            <!-- Testimonio 2 -->
+            <a href="https://drive.google.com/file/d/1z6cicTBOAycmFKEXPviiWmv0SYg0f7Xt/view?usp=drivesdk" target="_blank" class="bg-insivoSecondary p-6 rounded-2xl border border-insivoGold/10 hover:border-insivoGold/40 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="flex text-insivoGold gap-1 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                        "Sistematizar las recomendaciones alivió de forma inmediata las tareas repetitivas del equipo en recepción filtrando de raíz a los curiosos."
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-insivoGold/10 text-xs text-insivoGold group-hover:underline">
+                    <span>Ver Video Testimonio</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </a>
+
+            <!-- Testimonio 3 -->
+            <a href="https://drive.google.com/file/d/1ZoQG2LS6BnhpQ0Oj4WVB60pAoFLpApk/view?usp=drivesdk" target="_blank" class="bg-insivoSecondary p-6 rounded-2xl border border-insivoGold/10 hover:border-insivoGold/40 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="flex text-insivoGold gap-1 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                        "Excelente herramienta para medir de manera científica qué pacientes satisfechos actúan verdaderamente como nuestros mejores promotores."
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-insivoGold/10 text-xs text-insivoGold group-hover:underline">
+                    <span>Ver Video Testimonio</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </a>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="#booking-section" class="inline-block bg-insivoGold hover:bg-insivoCream text-insivoDark text-xs md:text-sm font-bold uppercase tracking-wider px-8 py-3 rounded-full transition-all">
+                AGENDAR MI EVALUACIÓN COMERCIAL <i class="fa-solid fa-calendar-plus ml-2"></i>
+            </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-insivoSecondary py-12 px-6 border-t border-insivoGold/20">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-400">
-            <div class="flex items-center gap-2">
-                <span class="text-lg font-light tracking-widest text-white uppercase">INSIVO</span>
-                <span class="text-xs text-gray-500">© 2026. Todos los derechos reservados.</span>
-            </div>
-            <div class="flex gap-6 text-xs">
-                <a href="#" class="hover:text-insivoGold transition-colors">Términos de Servicio</a>
-                <a href="#" class="hover:text-insivoGold transition-colors">Política de Privacidad</a>
-                <a href="#" class="hover:text-insivoGold transition-colors">Contacto Técnico</a>
-            </div>
-        </div>
+    <footer class="border-t border-insivoGold/10 bg-insivoDark py-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Insivo S.A. Todos los derechos reservados. Diseñado para el sector de bienestar y estética.</p>
     </footer>
 
-    <!-- JS LOGIC FOR INTERACTIVITY -->
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
-        // VSL Dynamic Content Steps based on original script
-        const vslSteps = [
-            {
-                tag: "PASO 1: EL DOLOR",
-                text: "En el sector de la cirugía plástica, la pauta digital satura a su equipo con personas que solo cotizan precios, sin concretar. El error actual es dejar el canal de referidos 'boca en boca' al azar."
-            },
-            {
-                tag: "PASO 2: LA PROPUESTA",
-                text: "Insivo es la tecnología diseñada para especialistas estéticos que automatiza, estructura y mide sus recomendaciones. Se integra con su base de datos para invitar digitalmente a referir conocidos."
-            },
-            {
-                tag: "PASO 3: EL BENEFICIO",
-                text: "Rentabilice su historial de pacientes satisfechos en un flujo constante de consultas. Reduzca el CAC, aumente la confianza inicial y agende abajo una sesión técnica de 10 minutos."
-            }
+        // VSL Simulation Logic
+        const slides = [
+            { tag: "PASO 1: EL DOLOR", text: '"En el sector de la salud estética, cirugía y bienestar, basar el crecimiento únicamente en pauta digital satura a su equipo con personas que solo cotizan precios, dejando el canal de referidos al azar..."' },
+            { tag: "PASO 2: LA PROPUESTA", text: '"Insivo es la plataforma que permite automatizar, estructurar y medir el canal de recomendaciones de la clínica. El sistema se integra con su base de datos activa para invitar digitalmente en los momentos idóneos post-procedimiento..."' },
+            { tag: "PASO 3: EL BENEFICIO", text: '"Al implementar Insivo, incrementará el volumen de procedimientos médicos y estéticos mediante pacientes calificados de alta confianza. Esto optimiza el flujo interno de atención y protege el posicionamiento de su marca médica..."' }
         ];
-
-        let currentVslStep = 0;
+        let currentSlide = 0;
         let isPlaying = true;
-        let intervalId = null;
 
-        function updateVslSlide() {
-            const step = vslSteps[currentVslStep];
-            document.getElementById("vsl-tag").innerText = step.tag;
-            document.getElementById("vsl-text").innerText = `"${step.text}"`;
-            document.getElementById("vsl-time").innerText = `Capítulo ${currentVslStep + 1}/3`;
+        function updateVSL() {
+            document.getElementById("vsl-tag").innerText = slides[currentSlide].tag;
+            document.getElementById("vsl-text").innerText = slides[currentSlide].text;
+            document.getElementById("vsl-time").innerText = `Capítulo ${currentSlide + 1}/3`;
+            document.getElementById("vsl-progress").style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
             
-            // Highlight step tabs
             for(let i=0; i<3; i++) {
                 const tab = document.getElementById(`step-tab-${i}`);
-                if(i === currentVslStep) {
-                    tab.classList.add("bg-insivoDark", "text-white", "border", "border-insivoGold/40");
-                    tab.classList.remove("bg-black/40", "text-gray-400");
+                if(i === currentSlide) {
+                    tab.className = "px-2 py-1 rounded bg-insivoDark text-white font-semibold border border-insivoGold/40";
                 } else {
-                    tab.classList.remove("bg-insivoDark", "text-white", "border", "border-insivoGold/40");
-                    tab.classList.add("bg-black/40", "text-gray-400");
+                    tab.className = "px-2 py-1 rounded bg-black/40 text-gray-400";
                 }
             }
-
-            // Progress bar
-            const percent = ((currentVslStep + 1) / 3) * 100;
-            document.getElementById("vsl-progress").style.width = `${percent}%`;
-
-            // Randomize wave bars animation during change
-            const waveBars = document.querySelectorAll(".wave-bar");
-            waveBars.forEach(bar => {
-                const randomHeight = Math.floor(Math.random() * 24) + 4;
-                bar.style.height = `${randomHeight}px`;
-            });
         }
 
+        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; updateVSL(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateVSL(); }
+        function goToStep(step) { currentSlide = step; updateVSL(); }
         function togglePlay() {
             isPlaying = !isPlaying;
-            const playIcon = document.getElementById("play-icon");
-            if (isPlaying) {
-                playIcon.className = "fa-solid fa-pause ml-0.5";
-                startAutoplay();
-            } else {
-                playIcon.className = "fa-solid fa-play ml-1";
-                clearInterval(intervalId);
-            }
+            document.getElementById("play-icon").className = isPlaying ? "fa-solid fa-pause ml-0.5" : "fa-solid fa-play ml-0.5";
         }
 
-        function nextSlide() {
-            currentVslStep = (currentVslStep + 1) % vslSteps.length;
-            updateVslSlide();
-        }
-
-        function prevSlide() {
-            currentVslStep = (currentVslStep - 1 + vslSteps.length) % vslSteps.length;
-            updateVslSlide();
-        }
-
-        function goToStep(index) {
-            currentVslStep = index;
-            updateVslSlide();
-        }
-
-        function startAutoplay() {
-            clearInterval(intervalId);
-            intervalId = setInterval(() => {
-                nextSlide();
-            }, 6500); // changes every 6.5s
-        }
-
-        // Initialize VSL player
-        updateVslSlide();
-        startAutoplay();
-
+        // Transcript Toggle
         function toggleTranscript() {
             const content = document.getElementById("transcript-content");
             const arrow = document.getElementById("transcript-arrow");
-            if (content.classList.contains("hidden")) {
-                content.classList.remove("hidden");
-                arrow.classList.add("rotate-180");
-            } else {
-                content.classList.add("hidden");
-                arrow.classList.remove("rotate-180");
-            }
+            content.classList.toggle("hidden");
+            arrow.classList.toggle("rotate-180");
         }
 
-        // ROI CALCULATOR LOGIC
+        // ROI Calculator Logic
         function calculateROI() {
             const pacientes = parseInt(document.getElementById("input-pacientes").value);
             const costo = parseInt(document.getElementById("input-costo").value);
             const tasa = parseInt(document.getElementById("input-tasa").value) / 100;
 
-            // Updates display tags
             document.getElementById("val-pacientes").innerText = pacientes;
             document.getElementById("val-costo").innerText = `$${costo.toLocaleString()}`;
-            document.getElementById("val-tasa").innerText = `${Math.round(tasa * 100)}%`;
+            document.getElementById("val-tasa").innerText = `${(tasa * 100).toFixed(0)}%`;
 
-            // Calculate extra patients & revenues
             const nuevosPacientes = Math.round(pacientes * tasa);
-            const ingresoMensual = nuevosPacientes * costo;
-            const ahorroPauta = Math.round(nuevosPacientes * (costo * 0.08)); // estimated 8% typical high CAC savings
+            const ingresosExtra = nuevosPacientes * costo;
 
-            document.getElementById("result-revenue").innerText = `$${ingresoMensual.toLocaleString()}`;
+            document.getElementById("result-revenue").innerText = `$${ingresosExtra.toLocaleString()}`;
             document.getElementById("result-pacientes").innerText = `${nuevosPacientes} pacientes`;
-            document.getElementById("result-ahorro").innerText = `$${ahorroPauta.toLocaleString()} USD`;
         }
 
-        // Run calculation initially
-        calculateROI();
+        // Calendar Booking Logic
+        let selectedDate = null;
+        let selectedTimeSlot = null;
 
-        // INTERACTIVE SCHEDULER WIDGET
-        let selectedDay = "";
-        let selectedTimeSlot = "";
-
-        // Build 4 dynamic calendar day options starting from tomorrow
         function buildCalendar() {
             const picker = document.getElementById("date-picker");
             const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-            const daysOfWeek = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+            let html = "";
+            let baseDate = new Date();
             
-            picker.innerHTML = "";
-            let today = new Date();
-            
-            for (let i = 1; i <= 4; i++) {
-                let targetDate = new Date();
-                targetDate.setDate(today.getDate() + i);
+            for(let i = 1; i <= 4; i++) {
+                let futureDate = new Date(baseDate);
+                futureDate.setDate(baseDate.getDate() + i);
+                let dayNum = futureDate.getDate();
+                let dayLabel = months[futureDate.getMonth()];
                 
-                // Skip Sundays
-                if(targetDate.getDay() === 0) {
-                    targetDate.setDate(targetDate.getDate() + 1);
-                    i++;
-                }
-
-                const dayNum = targetDate.getDate();
-                const dayStr = daysOfWeek[targetDate.getDay()];
-                const monthStr = months[targetDate.getMonth()];
-                const fullFormatted = `${dayStr}, ${dayNum} de ${monthStr}`;
-
-                const btn = document.createElement("button");
-                btn.type = "button";
-                btn.className = "date-btn bg-insivoSecondary/80 hover:bg-insivoGold/10 border border-insivoGold/10 p-3 rounded-xl flex flex-col items-center justify-center transition-all";
-                btn.onclick = (e) => selectDate(fullFormatted, btn);
-                btn.innerHTML = `
-                    <span class="text-[10px] text-gray-400 uppercase tracking-widest">${dayStr}</span>
-                    <span class="text-lg font-bold text-white my-1">${dayNum}</span>
-                    <span class="text-[10px] text-insivoGold uppercase">${monthStr}</span>
-                `;
-                picker.appendChild(btn);
+                html += `<button onclick="selectDate('${dayNum} ${dayLabel}', this)" class="date-btn p-3 rounded-xl bg-insivoDark border border-insivoGold/10 hover:border-insivoGold/40 text-center transition-all flex flex-col items-center">
+                            <span class="text-[10px] text-gray-500 uppercase font-medium">${dayLabel}</span>
+                            <span class="text-base font-bold text-white mt-0.5">${dayNum}</span>
+                         </button>`;
             }
+            picker.innerHTML = html;
         }
 
-        buildCalendar();
-
-        function selectDate(dateString, element) {
-            selectedDay = dateString;
-            // Clear other date classes
-            document.querySelectorAll(".date-btn").forEach(btn => {
-                btn.classList.remove("border-insivoGold", "bg-insivoGold/20");
-                btn.classList.add("border-insivoGold/10", "bg-insivoSecondary/80");
-            });
-            // Highlight selected
-            element.classList.remove("border-insivoGold/10", "bg-insivoSecondary/80");
-            element.classList.add("border-insivoGold", "bg-insivoGold/20");
-            
-            checkStepOneReady();
+        function selectDate(dateStr, btn) {
+            document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("border-insivoGold", "bg-insivoGold/10"));
+            btn.classList.add("border-insivoGold", "bg-insivoGold/10");
+            selectedDate = dateStr;
+            checkValidation();
         }
 
-        function selectTime(timeStr, element) {
+        function selectTime(timeStr, btn) {
+            document.querySelectorAll(".time-btn").forEach(b => b.classList.remove("bg-insivoGold", "text-insivoDark", "border-insivoGold"));
+            btn.classList.add("bg-insivoGold", "text-insivoDark", "border-insivoGold");
             selectedTimeSlot = timeStr;
-            // Clear other time classes
-            document.querySelectorAll(".time-btn").forEach(btn => {
-                btn.classList.remove("bg-insivoGold", "text-insivoDark", "border-insivoGold");
-                btn.classList.add("bg-insivoSecondary", "text-white", "border-insivoGold/10");
-            });
-            // Highlight selected
-            element.classList.remove("bg-insivoSecondary", "text-white", "border-insivoGold/10");
-            element.classList.add("bg-insivoGold", "text-insivoDark", "border-insivoGold");
-            
-            checkStepOneReady();
+            checkValidation();
         }
 
-        function checkStepOneReady() {
-            const nextBtn = document.getElementById("next-to-form");
-            if (selectedDay && selectedTimeSlot) {
-                nextBtn.disabled = false;
-                nextBtn.classList.remove("bg-gray-700", "text-gray-400");
-                nextBtn.classList.add("bg-insivoGold", "text-insivoDark", "hover:bg-insivoCream");
+        function checkValidation() {
+            const btn = document.getElementById("next-to-form");
+            if (selectedDate && selectedTimeSlot) {
+                btn.removeAttribute("disabled");
+                btn.className = "w-full bg-insivoGold hover:bg-insivoCream text-insivoDark py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer";
             }
         }
 
         function goToFormStep() {
             document.getElementById("booking-step-1").classList.add("hidden");
             document.getElementById("booking-step-2").classList.remove("hidden");
-            document.getElementById("selected-summary").innerText = `${selectedDay} - ${selectedTimeSlot}`;
+            document.getElementById("selected-summary").innerText = `${selectedDate} - ${selectedTimeSlot}`;
         }
 
         function backToCalendar() {
@@ -739,38 +619,15 @@
             document.getElementById("booking-step-1").classList.remove("hidden");
         }
 
-        function submitBooking(event) {
-            event.preventDefault();
-            
-            // Get values
-            const name = document.getElementById("form-name").value;
-            const clinic = document.getElementById("form-clinic").value;
-
-            // Prepare Success fields
-            document.getElementById("success-doctor").innerText = name;
-            document.getElementById("success-clinic").innerText = clinic;
-            document.getElementById("success-time-summary").innerText = `${selectedDay} a las ${selectedTimeSlot}`;
-
-            // Switch view to step 3 (Success)
+        function submitBooking(e) {
+            e.preventDefault();
             document.getElementById("booking-step-2").classList.add("hidden");
-            document.getElementById("booking-step-success").classList.remove("hidden");
+            document.getElementById("booking-success").classList.remove("hidden");
         }
 
-        function copyToClipboard(text) {
-            const tempInput = document.createElement("input");
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            
-            // Temporary button label feedback
-            const btn = event.currentTarget;
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = `<i class="fa-solid fa-check text-green-400"></i> Copiado`;
-            setTimeout(() => {
-                btn.innerHTML = originalHTML;
-            }, 2000);
+        window.onload = function() {
+            calculateROI();
+            buildCalendar();
         }
     </script>
 </body>
