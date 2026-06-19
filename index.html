@@ -285,7 +285,7 @@
         </div>
     </section>
 
-    <!-- CALENDLY / AGENDAMIENTO INTERACTIVO -->
+    <!-- CALENDLY / AGENDAMIENTO REAL INTEGRADO -->
     <section id="booking-section" class="bg-insivoSecondary/50 border-t border-insivoGold/15 py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
@@ -297,10 +297,10 @@
             </div>
 
             <!-- Booking Widget Container -->
-            <div class="bg-insivoDark rounded-3xl border border-insivoGold/25 shadow-2xl overflow-hidden grid md:grid-cols-12 min-h-[500px]">
+            <div class="bg-insivoDark rounded-3xl border border-insivoGold/25 shadow-2xl overflow-hidden grid md:grid-cols-12 min-h-[600px]">
                 
                 <!-- Info Column -->
-                <div class="md:col-span-5 bg-insivoSecondary p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-insivoGold/15">
+                <div class="md:col-span-4 bg-insivoSecondary p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-insivoGold/15">
                     <div>
                         <div class="flex items-center gap-2 mb-6">
                             <span class="text-xs tracking-widest text-insivoGold font-bold">INSIVO</span>
@@ -315,6 +315,10 @@
 
                     <div class="space-y-3 pt-6 border-t border-insivoGold/10">
                         <div class="flex items-center gap-3 text-xs text-gray-400">
+                            <i class="fa-solid fa-clock text-insivoGold"></i>
+                            <span>Duración: 60 minutos</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-gray-400">
                             <i class="fa-solid fa-video text-insivoGold"></i>
                             <span>Sesión por Google Meet / Zoom</span>
                         </div>
@@ -325,96 +329,14 @@
                     </div>
                 </div>
 
-                <!-- Calendar/Form Column (Highlighted UI) -->
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between bg-insivoSecondary/80 border-2 border-insivoGold/30 shadow-inner rounded-r-none md:rounded-r-3xl shadow-black/40" id="calendar-flow-container">
-                    <!-- Step 1: Select Day and Time -->
-                    <div id="booking-step-1" class="space-y-6">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-xs font-semibold uppercase text-insivoGold tracking-wider">Seleccione un día</h4>
-                            <span class="text-xs text-gray-400 font-mono">Paso 1 de 2</span>
-                        </div>
-                        
-                        <!-- Mini Calendar Selector -->
-                        <div class="grid grid-cols-4 gap-2" id="date-picker">
-                            <!-- JS dynamically injects days starting from tomorrow -->
-                        </div>
-
-                        <div>
-                            <h4 class="text-xs font-semibold uppercase text-insivoGold tracking-wider mb-3">Horas disponibles</h4>
-                            <div class="grid grid-cols-3 gap-2" id="time-picker">
-                                <button onclick="selectTime('08:30 AM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">08:30 AM</button>
-                                <button onclick="selectTime('11:00 AM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">11:00 AM</button>
-                                <button onclick="selectTime('02:15 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">02:15 PM</button>
-                                <button onclick="selectTime('04:30 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">04:30 PM</button>
-                                <button onclick="selectTime('05:00 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">05:00 PM</button>
-                                <button onclick="selectTime('06:15 PM', this)" class="time-btn py-2.5 rounded-lg text-xs bg-insivoDark hover:bg-insivoGold/10 border border-insivoGold/10 text-white transition-all">06:15 PM</button>
-                            </div>
-                        </div>
-
-                        <!-- CTA to Step 2 -->
-                        <div class="pt-4">
-                            <button onclick="goToFormStep()" id="next-to-form" disabled class="w-full bg-gray-700 text-gray-400 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300">
-                                Confirmar Fecha y Hora
-                            </button>
-                        </div>
+                <!-- Calendly Live Embed Column -->
+                <div class="md:col-span-8 bg-white min-h-[600px] relative">
+                    <!-- Widget en línea de Calendly real de Ana Ferreira -->
+                    <div class="calendly-inline-widget w-full h-full" 
+                         data-url="https://calendly.com/ana-ferreira-insivo/60min?hide_landing_page_details=1&hide_gdpr_banner=1" 
+                         style="min-width:320px; height:600px;">
                     </div>
-
-                    <!-- Step 2: Form Details -->
-                    <div id="booking-step-2" class="space-y-4 hidden">
-                        <div class="flex items-center justify-between">
-                            <button onclick="backToCalendar()" class="text-xs text-insivoGold hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Regresar</button>
-                            <span class="text-xs text-gray-400 font-mono">Paso 2 de 2</span>
-                        </div>
-
-                        <div class="bg-insivoDark p-3 rounded-lg border border-insivoGold/10 text-xs">
-                            <span class="text-gray-400 block">Horario seleccionado:</span>
-                            <span class="text-white font-bold" id="selected-summary">Seleccione una opción</span>
-                        </div>
-
-                        <form id="appointment-form" onsubmit="submitBooking(event)" class="space-y-3">
-                            <div>
-                                <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Nombre Completo del Especialista</label>
-                                <input type="text" required id="form-name" placeholder="Dr. Daniel Solano" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
-                            </div>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Especialidad</label>
-                                    <select id="form-specialty" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
-                                        <option>Cirugía Plástica</option>
-                                        <option>Medicina Estética</option>
-                                        <option>Trasplante Capilar</option>
-                                        <option>Células Madre</option>
-                                        <option>Odontología Estética</option>
-                                        <option>Bienestar / Otra</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Nombre de la Clínica</label>
-                                    <input type="text" required id="form-clinic" placeholder="Aesthetic Clinic" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-[11px] text-gray-400 uppercase tracking-wider mb-1">Correo Electrónico de Consultorio</label>
-                                <input type="email" required id="form-email" placeholder="contacto@clinica.com" class="w-full bg-insivoDark border border-insivoGold/20 focus:border-insivoGold rounded-lg p-2.5 text-xs text-white focus:outline-none">
-                            </div>
-                            <div class="pt-2">
-                                <button type="submit" class="w-full bg-insivoGold hover:bg-insivoCream text-insivoDark py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300">
-                                    PROGRAMAR CONSULTORÍA <i class="fa-solid fa-check ml-1"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Step 3: Success State -->
-                    <div id="booking-success" class="hidden text-center py-12 space-y-4">
-                        <div class="w-16 h-16 bg-insivoGold/20 text-insivoGold rounded-full flex items-center justify-center text-2xl mx-auto pulse-soft">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
-                        <h4 class="text-xl font-light font-serif-brand text-insivoCream">¡Consultoría Reservada!</h4>
-                        <p class="text-xs text-gray-400 max-w-sm mx-auto leading-relaxed">
-                            Los accesos directos y detalles de la llamada de Google Meet han sido enviados a su casilla de correo electrónico. Nos vemos pronto.
-                        </p>
-                    </div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 </div>
             </div>
         </div>
@@ -550,72 +472,8 @@
             document.getElementById("result-pacientes").innerText = `${nuevosPacientes} pacientes`;
         }
 
-        // Calendar Booking Logic
-        let selectedDate = null;
-        let selectedTimeSlot = null;
-
-        function buildCalendar() {
-            const picker = document.getElementById("date-picker");
-            const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-            let html = "";
-            let baseDate = new Date();
-            
-            for(let i = 1; i <= 4; i++) {
-                let futureDate = new Date(baseDate);
-                futureDate.setDate(baseDate.getDate() + i);
-                let dayNum = futureDate.getDate();
-                let dayLabel = months[futureDate.getMonth()];
-                
-                html += `<button onclick="selectDate('${dayNum} ${dayLabel}', this)" class="date-btn p-3 rounded-xl bg-insivoDark border border-insivoGold/10 hover:border-insivoGold/40 text-center transition-all flex flex-col items-center">
-                            <span class="text-[10px] text-gray-500 uppercase font-medium">${dayLabel}</span>
-                            <span class="text-base font-bold text-white mt-0.5">${dayNum}</span>
-                         </button>`;
-            }
-            picker.innerHTML = html;
-        }
-
-        function selectDate(dateStr, btn) {
-            document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("border-insivoGold", "bg-insivoGold/10"));
-            btn.classList.add("border-insivoGold", "bg-insivoGold/10");
-            selectedDate = dateStr;
-            checkValidation();
-        }
-
-        function selectTime(timeStr, btn) {
-            document.querySelectorAll(".time-btn").forEach(b => b.classList.remove("bg-insivoGold", "text-insivoDark", "border-insivoGold"));
-            btn.classList.add("bg-insivoGold", "text-insivoDark", "border-insivoGold");
-            selectedTimeSlot = timeStr;
-            checkValidation();
-        }
-
-        function checkValidation() {
-            const btn = document.getElementById("next-to-form");
-            if (selectedDate && selectedTimeSlot) {
-                btn.removeAttribute("disabled");
-                btn.className = "w-full bg-insivoGold hover:bg-insivoCream text-insivoDark py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer";
-            }
-        }
-
-        function goToFormStep() {
-            document.getElementById("booking-step-1").classList.add("hidden");
-            document.getElementById("booking-step-2").classList.remove("hidden");
-            document.getElementById("selected-summary").innerText = `${selectedDate} - ${selectedTimeSlot}`;
-        }
-
-        function backToCalendar() {
-            document.getElementById("booking-step-2").classList.add("hidden");
-            document.getElementById("booking-step-1").classList.remove("hidden");
-        }
-
-        function submitBooking(e) {
-            e.preventDefault();
-            document.getElementById("booking-step-2").classList.add("hidden");
-            document.getElementById("booking-success").classList.remove("hidden");
-        }
-
         window.onload = function() {
             calculateROI();
-            buildCalendar();
         }
     </script>
 </body>
