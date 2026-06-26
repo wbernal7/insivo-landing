@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insivo - Sistema de Recomendación Automatizado para Clínicas de Estética y Bienestar</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Raleway & Nanum Myeongjo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Raleway:ital,wght=0,100;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -57,15 +54,12 @@
 </head>
 <body class="bg-insivoDark text-white font-sans overflow-x-hidden antialiased">
 
-    <!-- TOP BAR -->
     <div class="bg-insivoSecondary border-b border-insivoGold/20 py-2.5 px-4 text-center text-xs md:text-sm tracking-widest text-insivoCream">
         <i class="fa-solid fa-circle-check text-insivoGold mr-2"></i>TECNOLOGÍA EXCLUSIVA PARA ESPECIALISTAS EN BIENESTAR Y ESTÉTICA EN COSTA RICA
     </div>
 
-    <!-- HEADER -->
     <header class="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center">
-            <!-- LOGO DESDE GITHUB -->
             <img src="https://raw.githubusercontent.com/wbernal7/insivo-landing/main/LogoInsivo.svg" alt="Insivo Logo" class="h-10 md:h-12 w-auto object-contain">
         </div>
         <div class="flex items-center gap-3">
@@ -76,18 +70,24 @@
         </div>
     </header>
 
-    <!-- HERO SECTION / VSL -->
     <section class="max-w-6xl mx-auto px-6 pt-8 pb-16 md:py-20 text-center">
         <span class="text-insivoGold text-xs md:text-sm tracking-[0.3em] font-semibold uppercase block mb-4">Sistematiza tu canal más rentable y aprende a escalarlo</span>
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight max-w-4xl mx-auto leading-tight mb-12">
             Deje de basar el crecimiento de su clínica únicamente en <span class="text-insivoGold font-serif-brand italic">anuncios pagados</span>
         </h1>
 
-        <!-- VIMEO VIDEO PLAYER -->
         <div class="max-w-4xl mx-auto bg-insivoSecondary rounded-2xl border border-insivoGold/20 overflow-hidden shadow-2xl shadow-black/50 mb-12 relative">
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://kikou-group.com/wp-content/uploads/2026/06/VSL_1.mp4?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="INSIVO-VSL-medior"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://kikou-group.com/wp-content/uploads/2026/06/VSL_1.mp4?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="INSIVO-VSL-medior">
+                </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
 
-            <!-- VSL Text transcript -->
             <div class="bg-insivoDark/80 p-6 border-t border-insivoGold/20 text-left">
                 <div class="flex items-center justify-between cursor-pointer" onclick="toggleTranscript()">
                     <span class="text-xs font-semibold tracking-wider text-insivoCream uppercase flex items-center gap-2">
@@ -108,7 +108,6 @@
         </a>
     </section>
 
-    <!-- EL ERROR VS LA SOLUCIÓN -->
     <section class="bg-insivoSecondary border-y border-insivoGold/15 py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -117,7 +116,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-                <!-- El error -->
                 <div class="bg-insivoDark p-8 rounded-2xl border border-red-500/10 hover:border-red-500/20 transition-all">
                     <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mb-6">
                         <i class="fa-solid fa-triangle-exclamation text-xl"></i>
@@ -143,7 +141,6 @@
                     </ul>
                 </div>
 
-                <!-- El modelo Insivo -->
                 <div class="bg-insivoDark p-8 rounded-2xl border border-insivoGold/20 hover:border-insivoGold/40 transition-all relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-insivoGold text-insivoDark text-[10px] font-bold tracking-wider uppercase px-4 py-1 rounded-bl">RECOMENDADO</div>
                     <div class="w-12 h-12 rounded-full bg-insivoGold/10 flex items-center justify-center text-insivoGold mb-6">
@@ -175,7 +172,6 @@
         </div>
     </section>
 
-    <!-- INTERACTIVE ROI CALCULATOR -->
     <section class="py-16 md:py-24 max-w-6xl mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-insivoGold text-xs tracking-[0.25em] font-semibold uppercase block mb-3">Simulación Financiera</span>
@@ -185,7 +181,6 @@
 
         <div class="grid lg:grid-cols-12 gap-8 items-center bg-insivoSecondary p-6 md:p-10 rounded-3xl border border-insivoGold/10">
             <div class="lg:col-span-7 space-y-6">
-                <!-- Pacientes atendidos -->
                 <div>
                     <div class="flex justify-between text-sm mb-2">
                         <span class="text-gray-300 font-medium">Pacientes atendidos al mes:</span>
@@ -198,7 +193,6 @@
                     </div>
                 </div>
 
-                <!-- Costo de procedimiento -->
                 <div>
                     <div class="flex justify-between text-sm mb-2">
                         <span class="text-gray-300 font-medium">Costo promedio por procedimiento (USD):</span>
@@ -211,7 +205,6 @@
                     </div>
                 </div>
 
-                <!-- Tasa de recomendación automatizada -->
                 <div>
                     <div class="flex justify-between text-sm mb-2">
                         <span class="text-gray-300 font-medium">Tasa de recomendación estimada con Insivo:</span>
@@ -225,7 +218,6 @@
                 </div>
             </div>
 
-            <!-- ROI Results View -->
             <div class="lg:col-span-5 bg-insivoDark p-8 rounded-2xl border border-insivoGold/30 text-center relative overflow-hidden">
                 <div class="absolute -top-12 -right-12 w-24 h-24 bg-insivoGold/5 rounded-full blur-xl"></div>
                 <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">Ingreso adicional estimado al mes</span>
@@ -243,7 +235,6 @@
         </div>
     </section>
 
-    <!-- CALENDLY / AGENDAMIENTO REAL INTEGRADO -->
     <section id="booking-section" class="bg-insivoSecondary/50 border-t border-insivoGold/15 py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
@@ -254,10 +245,8 @@
                 </p>
             </div>
 
-            <!-- Booking Widget Container -->
             <div class="bg-insivoDark rounded-3xl border border-insivoGold/25 shadow-2xl overflow-hidden grid md:grid-cols-12 min-h-[600px]">
                 
-                <!-- Info Column -->
                 <div class="md:col-span-4 bg-insivoSecondary p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-insivoGold/15">
                     <div>
                         <div class="flex items-center gap-2 mb-6">
@@ -274,7 +263,7 @@
                     <div class="space-y-3 pt-6 border-t border-insivoGold/10">
                         <div class="flex items-center gap-3 text-xs text-gray-400">
                             <i class="fa-solid fa-clock text-insivoGold"></i>
-                            <span>Duración: 60 minutos</span>
+                            <span>Duración: 60 minutes</span>
                         </div>
                         <div class="flex items-center gap-3 text-xs text-gray-400">
                             <i class="fa-solid fa-video text-insivoGold"></i>
@@ -287,9 +276,7 @@
                     </div>
                 </div>
 
-                <!-- Calendly Live Embed Column -->
                 <div class="md:col-span-8 bg-white min-h-[600px] relative">
-                    <!-- Widget en línea de Calendly real de Ana Ferreira -->
                     <div class="calendly-inline-widget w-full h-full" 
                          data-url="https://calendly.com/ana-ferreira-insivo/60min?hide_landing_page_details=1&hide_gdpr_banner=1" 
                          style="min-width:320px; height:600px;">
@@ -300,7 +287,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE TESTIMONIOS -->
     <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 border-t border-insivoGold/15">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-insivoGold text-xs tracking-[0.25em] font-semibold uppercase block mb-3">Casos de Éxito</span>
@@ -309,7 +295,6 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Testimonio 1 -->
             <a href="https://drive.google.com/file/d/1uPy2gdpLpdPh-DOT5dKFpDeOOqB-5zr/view?usp=drivesdk" target="_blank" class="bg-insivoSecondary p-6 rounded-2xl border border-insivoGold/10 hover:border-insivoGold/40 transition-all flex flex-col justify-between group">
                 <div>
                     <div class="flex text-insivoGold gap-1 mb-4 text-xs">
@@ -325,7 +310,6 @@
                 </div>
             </a>
 
-            <!-- Testimonio 2 -->
             <a href="https://drive.google.com/file/d/1z6cicTBOAycmFKEXPviiWmv0SYg0f7Xt/view?usp=drivesdk" target="_blank" class="bg-insivoSecondary p-6 rounded-2xl border border-insivoGold/10 hover:border-insivoGold/40 transition-all flex flex-col justify-between group">
                 <div>
                     <div class="flex text-insivoGold gap-1 mb-4 text-xs">
@@ -341,7 +325,6 @@
                 </div>
             </a>
 
-            <!-- Testimonio 3 -->
             <a href="https://drive.google.com/file/d/1ZoQG2LS6BnhpQ0Oj4WVB60pAoFLpApk/view?usp=drivesdk" target="_blank" class="bg-insivoSecondary p-6 rounded-2xl border border-insivoGold/10 hover:border-insivoGold/40 transition-all flex flex-col justify-between group">
                 <div>
                     <div class="flex text-insivoGold gap-1 mb-4 text-xs">
@@ -365,12 +348,10 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="border-t border-insivoGold/10 bg-insivoDark py-8 text-center text-xs text-gray-500">
         <p>&copy; 2026 Insivo S.A. Todos los derechos reservados. Diseñado para el sector de bienestar y estética.</p>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
         // Transcript Toggle
         function toggleTranscript() {
