@@ -83,51 +83,9 @@
             Deje de basar el crecimiento de su clínica únicamente en <span class="text-insivoGold font-serif-brand italic">anuncios pagados</span>
         </h1>
 
-        <!-- INTERACTIVE VSL SIMULATOR -->
+        <!-- VIMEO VIDEO PLAYER -->
         <div class="max-w-4xl mx-auto bg-insivoSecondary rounded-2xl border border-insivoGold/20 overflow-hidden shadow-2xl shadow-black/50 mb-12 relative">
-            <div id="vsl-player" class="relative aspect-video w-full bg-black/90 flex flex-col justify-between p-6 md:p-10 select-none">
-                <div class="absolute top-4 right-6 opacity-30 text-xs tracking-widest text-white flex items-center gap-1">
-                    INSIVO <span class="text-[8px] border border-white/50 px-1 py-0.5 rounded">VSL</span>
-                </div>
-
-                <div class="flex-grow flex flex-col justify-center items-center text-center px-4 max-w-2xl mx-auto">
-                    <span id="vsl-tag" class="text-xs uppercase tracking-widest text-insivoGold bg-insivoGold/10 px-3 py-1 rounded-full mb-6 border border-insivoGold/20">PASO 1: EL DOLOR</span>
-                    <p id="vsl-text" class="text-lg md:text-2xl font-light leading-relaxed text-insivoCream font-serif-brand min-h-[140px] flex items-center justify-center">
-                        "En el sector de la salud estética, basar el crecimiento únicamente en pauta digital satura a su equipo con personas que solo cotizan precios..."
-                    </p>
-                </div>
-
-                <div class="w-full flex flex-col gap-4">
-                    <div class="flex justify-center items-end gap-1 h-8 opacity-60">
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-2"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-5"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-3"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-7"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-4"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-8"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-5"></span>
-                        <span class="w-1 bg-insivoGold rounded-full transition-all duration-300 wave-bar h-3"></span>
-                    </div>
-
-                    <div class="relative w-full h-1.5 bg-white/10 rounded-full cursor-pointer" id="progress-container">
-                        <div id="vsl-progress" class="absolute top-0 left-0 h-full bg-insivoGold rounded-full transition-all duration-300" style="width: 15%;"></div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-                        <div class="flex items-center gap-4">
-                            <button id="vsl-prev-btn" onclick="prevSlide()" class="hover:text-white transition-colors p-1"><i class="fa-solid fa-backward-step text-lg"></i></button>
-                            <button id="vsl-play-btn" onclick="togglePlay()" class="bg-insivoGold text-insivoDark w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 transition-transform"><i id="play-icon" class="fa-solid fa-pause ml-0.5"></i></button>
-                            <button id="vsl-next-btn" onclick="nextSlide()" class="hover:text-white transition-colors p-1"><i class="fa-solid fa-forward-step text-lg"></i></button>
-                            <span id="vsl-time" class="font-mono">Capítulo 1/3</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <button onclick="goToStep(0)" class="px-2 py-1 rounded bg-insivoDark text-white font-semibold border border-insivoGold/40" id="step-tab-0">El Dolor</button>
-                            <button onclick="goToStep(1)" class="px-2 py-1 rounded bg-black/40 text-gray-400" id="step-tab-1">La Propuesta</button>
-                            <button onclick="goToStep(2)" class="px-2 py-1 rounded bg-black/40 text-gray-400" id="step-tab-2">El Beneficio</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://kikou-group.com/wp-content/uploads/2026/06/VSL_1.mp4?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="INSIVO-VSL-medior"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
             <!-- VSL Text transcript -->
             <div class="bg-insivoDark/80 p-6 border-t border-insivoGold/20 text-left">
@@ -414,39 +372,6 @@
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
-        // VSL Simulation Logic
-        const slides = [
-            { tag: "PASO 1: EL DOLOR", text: '"En el sector de la salud estética, cirugía y bienestar, basar el crecimiento únicamente en pauta digital satura a su equipo con personas que solo cotizan precios, dejando el canal de referidos al azar..."' },
-            { tag: "PASO 2: LA PROPUESTA", text: '"Insivo es la plataforma que permite automatizar, estructurar y medir el canal de recomendaciones de la clínica. El sistema se integra con su base de datos activa para invitar digitalmente en los momentos idóneos post-procedimiento..."' },
-            { tag: "PASO 3: EL BENEFICIO", text: '"Al implementar Insivo, incrementará el volumen de procedimientos médicos y estéticos mediante pacientes calificados de alta confianza. Esto optimiza el flujo interno de atención y protege el posicionamiento de su marca médica..."' }
-        ];
-        let currentSlide = 0;
-        let isPlaying = true;
-
-        function updateVSL() {
-            document.getElementById("vsl-tag").innerText = slides[currentSlide].tag;
-            document.getElementById("vsl-text").innerText = slides[currentSlide].text;
-            document.getElementById("vsl-time").innerText = `Capítulo ${currentSlide + 1}/3`;
-            document.getElementById("vsl-progress").style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
-            
-            for(let i=0; i<3; i++) {
-                const tab = document.getElementById(`step-tab-${i}`);
-                if(i === currentSlide) {
-                    tab.className = "px-2 py-1 rounded bg-insivoDark text-white font-semibold border border-insivoGold/40";
-                } else {
-                    tab.className = "px-2 py-1 rounded bg-black/40 text-gray-400";
-                }
-            }
-        }
-
-        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; updateVSL(); }
-        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateVSL(); }
-        function goToStep(step) { currentSlide = step; updateVSL(); }
-        function togglePlay() {
-            isPlaying = !isPlaying;
-            document.getElementById("play-icon").className = isPlaying ? "fa-solid fa-pause ml-0.5" : "fa-solid fa-play ml-0.5";
-        }
-
         // Transcript Toggle
         function toggleTranscript() {
             const content = document.getElementById("transcript-content");
